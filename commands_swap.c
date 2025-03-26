@@ -6,45 +6,51 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 17:03:02 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/25 21:05:11 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:15:07 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-void command_swap(t_stack **st)
+void	sa(t_stack **a, int m)
 {
-	if (*st == NULL || (*st)->next == NULL)
+	if (*a == NULL || (*a)->next == NULL)
 		return ;
-	t_stack *first = *st;
-	t_stack *second = (*st)->next;
+	t_stack *first = *a;
+	t_stack *second = (*a)->next;
+
 	first->next = second->next;
 	if (second->next)
 		second->next->previous = first;
 	second->previous = NULL;
 	second->next = first;
 	first->previous = second;
-	*st = second;
-}
-
-void	sa(t_stack **a, int m)
-{
-	command_swap(a);
+	*a = second;
 	if (m == 1)
 		ft_printf("sa\n");
 }
 
 void	sb(t_stack **b, int m)
 {
-	command_swap(b);
+	if (*b == NULL || (*b)->next == NULL)
+		return ;
+	t_stack *first = *b;
+	t_stack *second = (*b)->next;
+
+	first->next = second->next;
+	if (second->next)
+		second->next->previous = first;
+	second->previous = NULL;
+	second->next = first;
+	first->previous = second;
+	*b = second;
 	if (m == 1)
 		ft_printf("sb\n");
 }
 
-void	ss(t_stack **a, t_stack **b, int m)
+void	ss(t_stack **a, t_stack **b)
 {
-	command_swap(a);
-	command_swap(b);
-	if (m == 1)
-		ft_printf("ss\n");
+	sa(a, 0);
+	sb(b, 0);
+	ft_printf("ss\n");
 }

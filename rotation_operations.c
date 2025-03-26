@@ -6,11 +6,12 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:57:48 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/25 20:46:20 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:34:09 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
 t_stack	*find_best_move_stack(t_stack *st)
 {
 	if (!st)
@@ -24,23 +25,33 @@ t_stack	*find_best_move_stack(t_stack *st)
 	return (NULL);
 }
 
-void	set_min_rotations(t_stack *st)
+void	find_best_move_choice(t_stack *st, int min_rotation)
 {
-	long	min_rotation;
-	t_stack	*buff;
-
-	if (!st)
-		return ;
-	min_rotation = LONG_MAX;
-	buff = st;
 	while (st)
 	{
-		if (st->rotations < min_rotation)
+		if (min_rotation == st->rotations)
 		{
-			min_rotation = st->rotations;
-			buff = st;
+			st->is_best_move_choice = 1;
+			return ;
 		}
 		st = st->next;
 	}
-	buff->is_best_move_choice = 1;
+}
+
+void	set_min_rotations(t_stack *st)
+{
+	int	min_rotation;
+	t_stack *buff;
+
+	if (!st)
+		return ;
+	buff = st;
+	min_rotation = st->rotations;
+	while (st)
+	{
+		if (st->rotations < min_rotation)
+			min_rotation = st->rotations;
+		st = st->next;
+	}
+	find_best_move_choice(buff, min_rotation);
 }

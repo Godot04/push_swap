@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/20 16:59:11 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/25 18:39:10 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:36:33 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,35 @@ void	small_to_top(t_stack **a)
 		else
 			rra(a, 1);
 	}
+}
+
+int	stack_sorted(t_stack *stack)
+{
+	if (!stack)
+		return (1);
+	while (stack->next)
+	{
+		if (stack->value > stack->next->value)
+			return (1);
+		stack = stack->next;
+	}
+	return (0);
+}
+
+void	free_stack(t_stack **stack)
+{
+	t_stack *current = *stack;
+	t_stack *next;
+
+	if (!stack)
+		return ;
+	while (current)
+	{
+		next = current->next;
+		free(current);
+		current = next;
+	}
+	*stack = NULL;
 }
 
 int	count_stacks(t_stack *st)

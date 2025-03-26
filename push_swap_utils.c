@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/14 15:58:42 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/26 09:59:25 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 10:40:42 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,9 +64,9 @@ void	index_counter (t_stack *st)
 	{
 		st->index = i;
 		if (i < medium)
-			st->is_below_medium = 1;
-		else
 			st->is_below_medium = 0;
+		else
+			st->is_below_medium = 1;
 		st = st->next;
 		i++;
 	}

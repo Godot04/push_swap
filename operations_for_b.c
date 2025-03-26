@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 12:53:17 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/26 09:59:28 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:43:46 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	set_target_node_b(t_stack *a, t_stack *b)
 
 	while (b)
 	{
-		index = LONG_MAX;
+		index = INT_MAX + 1;
 		buff_a = a;
 		while (buff_a)
 		{
@@ -31,7 +31,7 @@ void	set_target_node_b(t_stack *a, t_stack *b)
 			}
 			buff_a = buff_a->next;
 		}
-		if (index == LONG_MAX)
+		if (index == INT_MAX + 1)
 			b->target = find_smallest(a);
 		else
 			b->target = target;

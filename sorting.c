@@ -6,11 +6,20 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:06:10 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/26 09:59:14 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 14:38:07 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+void	sort_2(t_stack **st)
+{
+	if (*st == NULL)
+		return ;
+	t_stack *s = *st;
+	if (s->value > s->next->value)
+		sa(st, 1);
+}
 
 void	sort_3(t_stack **st)
 {

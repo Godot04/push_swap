@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/19 17:32:15 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/26 09:59:31 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 13:43:52 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	set_target_node_a(t_stack *a, t_stack *b)
 	target = NULL;
 	while (a)
 	{
-		index = LONG_MIN;
+		index = INT_MIN - 1;
 		buff_b = b;
 		while (buff_b)
 		{
@@ -32,7 +32,7 @@ void	set_target_node_a(t_stack *a, t_stack *b)
 			}
 			buff_b = buff_b->next;
 		}
-		if (index == LONG_MIN)
+		if (index == INT_MIN - 1)
 			a->target = find_highest(b);
 		else
 			a->target = target;
@@ -72,23 +72,21 @@ void	rotation_analysis(t_stack *a, t_stack *b)
 	}
 }
 
-void move_stack_a_to_b(t_stack **a, t_stack **b)
+void	move_stack_a_to_b(t_stack **a, t_stack **b)
 {
 	t_stack *best_move_stack;
-	// t_stack *target;
 	int stack_a_down;
 	int stack_b_down;
 
 	best_move_stack = find_best_move_stack(*a);
-	// target = best_move_stack->target;
 	stack_a_down = best_move_stack->is_below_medium;
 	stack_b_down = best_move_stack->target->is_below_medium;
 	while(*a != best_move_stack && *b != best_move_stack->target && stack_a_down == stack_b_down)
 	{
 		if (stack_b_down)
-			rrr(a, b, 1);
+			rrr(a, b);
 		else
-			rr(a, b, 1);
+			rr(a, b);
 	}
 	while (*a != best_move_stack)
 	{
