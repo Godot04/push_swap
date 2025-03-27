@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 11:04:11 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/26 14:54:24 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 18:56:31 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int		count_stacks(t_stack *st);
 void	index_counter (t_stack *st);
 void	sort_3(t_stack **st);
 void	sort_2(t_stack **st);
+void	sort_4_and_5(t_stack **a, t_stack **b);
 void	sort_stacks(t_stack **a, t_stack **b);
 void	set_target_node_a(t_stack *a, t_stack *b);
 void	small_to_top(t_stack **a);
@@ -55,3 +56,5 @@ void	operations_for_b(t_stack **a, t_stack **b);
 void	set_min_rotations(t_stack *st);
 int		stack_sorted(t_stack *stack);
 void	free_stack(t_stack **stack);
+
+char	**split(char *s, char c);

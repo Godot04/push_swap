@@ -6,7 +6,7 @@
 #    By: opopov <opopov@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/03/14 13:22:01 by opopov            #+#    #+#              #
-#    Updated: 2025/03/26 13:06:22 by opopov           ###   ########.fr        #
+#    Updated: 2025/03/26 18:56:40 by opopov           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,11 +17,11 @@ SRC     := commands_push.c commands_reverse_rotate.c \
 			operations_for_a.c operations_for_b.c \
 			push_swap_utils.c push_swap.c \
 			rotation_operations.c sorting.c \
-			utils_for_utils.c
+			utils_for_utils.c split.c
 
 OBJ     := $(SRC:.c=.o)
 CC      := cc
-CFLAGS  := -Wall -Wextra -Werror
+CFLAGS  := -Wall -Wextra -Werror -g
 
 LIBFT_DIR	:= Libft
 LIBFT		:= $(LIBFT_DIR)/libft.a

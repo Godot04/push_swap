@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 11:04:00 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/26 14:36:40 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/27 10:46:13 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ int	main (int argc, char **argv)
 	if (argc < 2 || (argc == 2 && !argv[1][0]))
 		return (ft_printf("Error\n"));
 	if (argc == 2)
-		argv = ft_split(argv[1], ' ');
+		argv = split(argv[1], ' ');
 	if (create_stack(argv + 1, &a))
 	{
 		free_stack(&a);
@@ -76,7 +76,9 @@ int	main (int argc, char **argv)
 		sort_2(&a);
 	else if (count == 3)
 		sort_3(&a);
-	else
+	else if (count >= 4 && count <= 5)
+		sort_4_and_5(&a, &b);
+	else if (count > 5)
 		sort_stacks(&a, &b);
 	free_stack(&a);
 	return (0);

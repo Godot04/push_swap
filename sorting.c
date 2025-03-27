@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/17 11:06:10 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/26 14:38:07 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 16:51:35 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,31 @@ void	sort_3(t_stack **st)
 		rra(st, 1);
 	if ((*st)->value > (*st)->next->value)
 		sa(st, 1);
+}
+
+void	sort_4_and_5(t_stack **a, t_stack **b)
+{
+	if (*a == NULL)
+		return ;
+	int pushed = count_stacks(*a) - 3;
+	t_stack *smallest;
+	while (pushed--)
+	{
+		smallest = find_smallest(*a);
+		index_counter(*a);
+		index_counter(*b);
+		while ((*a)->value != smallest->value)
+		{
+			if (smallest->is_below_medium == 1)
+				rra(a, 1);
+			else
+				ra(a, 1);
+		}
+		pb(a, b, 1);
+	}
+	sort_3(a);
+	while (*b)
+		pa(a, b, 1);
 }
 
 void	sort_stacks(t_stack **a, t_stack **b)

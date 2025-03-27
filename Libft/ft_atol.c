@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 10:21:45 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/18 10:23:02 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/26 17:01:53 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +36,9 @@ static int	ft_plusminus(const char *nptr, int *a, int min)
 	return (min);
 }
 
-long long	ft_atol(const char *nptr)
+long	ft_atol(const char *nptr)
 {
-	long long	res;
+	long	res;
 	int	a;
 	int	min;
 

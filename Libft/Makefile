@@ -6,7 +6,7 @@
 #    By: opopov <opopov@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/11/11 10:40:02 by opopov            #+#    #+#              #
-#    Updated: 2025/03/18 14:07:54 by opopov           ###   ########.fr        #
+#    Updated: 2025/03/27 10:36:24 by opopov           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,7 +31,7 @@ SRC     := ft_isalpha.c ft_isdigit.c \
 		ft_putstr_fd.c ft_putendl_fd.c \
 		ft_putnbr_fd.c ft_split.c \
 		ft_atol.c ft_str_isdigit.c \
-		ft_duplicate_check.c
+		ft_duplicate_check.c ft_double_space_check.c ft_strcmp.c
 
 OBJ     := $(SRC:.c=.o)
 CC      := gcc

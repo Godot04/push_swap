@@ -6,7 +6,7 @@
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/11 12:33:54 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/18 14:07:37 by opopov           ###   ########.fr       */
+/*   Updated: 2025/03/27 10:35:55 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,8 +56,10 @@ void		ft_putstr_fd(char *s, int fd);
 void		ft_putendl_fd(char *s, int fd);
 void		ft_putnbr_fd(int n, int fd);
 char		**ft_split(char const *s, char c);
-long long	ft_atol(const char *nptr);
+long		ft_atol(const char *nptr);
 int			ft_str_isdigit(char **str);
 int			ft_duplicate_check(char **str);
+int			ft_double_space_check(char **str);
+int			ft_strcmp(const char *s1, const char *s2);
 
 #endif

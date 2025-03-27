@@ -1,41 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_duplicate_check.c                               :+:      :+:    :+:   */
+/*   ft_strcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: opopov <opopov@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/18 13:39:26 by opopov            #+#    #+#             */
-/*   Updated: 2025/03/27 10:36:38 by opopov           ###   ########.fr       */
+/*   Created: 2025/03/27 10:34:53 by opopov            #+#    #+#             */
+/*   Updated: 2025/03/27 10:36:03 by opopov           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_duplicate_check(char **str)
+int	ft_strcmp(const char *s1, const char *s2)
 {
-	int i;
-	int j;
-	long num_i;
-	long num_j;
+	size_t	a;
 
-	if (*str == NULL)
-		return (0);
-	i = 0;
-	while (str[i])
+	a = 0;
+	while (s1[a] && s2[a])
 	{
-		num_i = ft_atol(str[i]);
-		j = i + 1;
-		while (str[j])
+		if (s1[a] != s2[a])
 		{
-			num_j = ft_atol(str[j]);
-			if (!ft_strcmp(str[i], str[j]))
-				return (0);
-			if (num_i == num_j)
-				return (0);
-			j++;
+			return ((unsigned char)s1[a] - (unsigned char)s2[a]);
 		}
-		i++;
+		a++;
 	}
-	return (1);
+	return ((unsigned char)s1[a] - (unsigned char)s2[a]);
+	return (0);
 }
