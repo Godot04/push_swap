@@ -23,16 +23,16 @@ Through this project, I got some skills of algorithmic thinking, complexity anal
 
 The program can use the following operations:
 
-- **sa**(swap a) - Swap the first 2 elements at the top of stack A
-- **sb**(swap b) - Swap the first 2 elements at the top of stack B
+- **sa** (swap a) - Swap the first 2 elements at the top of stack A
+- **sb** (swap b) - Swap the first 2 elements at the top of stack B
 - **ss** - Execute `sa` and `sb` simultaneously
-- **pa**(push a) - Take the first element at the top of b and put it at the top of a
-- **pb**(push b) - Take the first element at the top of a and put it at the top of b
-- **ra**(rotate a) - Shift up all elements of stack a by 1 (The first element becomes the last one)
-- **rb**(rotate b) - Shift up all elements of stack b by 1 (The first element becomes the last one)
+- **pa** (push a) - Take the first element at the top of b and put it at the top of a
+- **pb** (push b) - Take the first element at the top of a and put it at the top of b
+- **ra** (rotate a) - Shift up all elements of stack a by 1 (The first element becomes the last one)
+- **rb** (rotate b) - Shift up all elements of stack b by 1 (The first element becomes the last one)
 - **rr** - Execute `ra` and `rb` simultaneously
-- **rra**(reverse rotate a) - Shift down all elements of stack a by 1 (The last element becomes the first one)
-- **rrb**(reverse rotate b) - Shift down all elements of stack b by 1 (The last element becomes the first one)
+- **rra** (reverse rotate a) - Shift down all elements of stack a by 1 (The last element becomes the first one)
+- **rrb** (reverse rotate b) - Shift down all elements of stack b by 1 (The last element becomes the first one)
 - **rrr** - Execute `rra` and `rrb` simultaneously
 
 ## 🧠 Algorithm Strategy
