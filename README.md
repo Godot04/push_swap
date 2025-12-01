@@ -42,7 +42,7 @@ My implementation uses an optimized sorting strategy:
 ### For Small Stacks (2-5 elements)
 
 - **2 elements**: Simple swap if needed
-- **3 elements**: Hardcoded optimal solution
+- **3 elements**: Identifies the highest value and positions it at the bottom, then swaps if needed to sort the remaining two elements
 - **4-5 elements**: Push smallest elements to stack B, sort remaining in A, then push back
 
 ### For Large Stacks (6+ elements)
