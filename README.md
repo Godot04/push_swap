@@ -201,8 +201,3 @@ ARG="3 2 5 1 4"; ./push_swap $ARG | ./checker_linux $ARG
 ## 👤 Author
 
 **opopov** - 42 School Student
-
-## 📅 Project Timeline
-
-- **Created**: March 13, 2025
-- **Last Updated**: March 28, 2025
