@@ -6,9 +6,9 @@
 
 ## 📖 About
 
-**push_swap** is a 42 School project that challenges you to sort a stack of integers using a limited set of operations, with the goal of minimizing the number of moves. This project teaches algorithmic thinking, complexity analysis, and optimization techniques.
+**push_swap** is a project that challenges you to sort a stack of integers using a limited set of operations, with the goal of minimizing the number of moves. The program takes a list of integers as arguments and outputs a series of instructions to sort them using two stacks (A and B) and a specific set of allowed operations (sa, sb, ss, pa, pb, ra, rb, rr, rra, rrb, rrr). 
 
-The program takes a list of integers as arguments and outputs a series of instructions to sort them using two stacks (A and B) and a specific set of allowed operations.
+Through this project, I got some skills of algorithmic thinking, complexity analysis, and some knowledge about optimization techniques.
 
 ## 🎯 Project Goals
 
